@@ -107,7 +107,8 @@ namespace HomeWork1
     {
         [TestCase(631, -1)]
         [TestCase(1090, 1900)]
-        [TestCase(1220, 2120)]
+        [TestCase(534976,536479 )]
+        [TestCase(1132, 1213)]
 
         public void Digitsrearranger(int input, int expectedResult)
         {
