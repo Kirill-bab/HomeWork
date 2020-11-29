@@ -106,8 +106,8 @@ namespace HomeWork1
     public class RearrangeDigitsTest                        // доп задание №1
     {
         [TestCase(631, -1)]
-        [TestCase(1090, 9100)]
-        [TestCase(1220, 2210)]
+        [TestCase(1090, 1900)]
+        [TestCase(1220, 2120)]
 
         public void Digitsrearranger(int input, int expectedResult)
         {
