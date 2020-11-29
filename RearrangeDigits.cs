@@ -18,7 +18,19 @@ namespace HomeWork1
                 digitsArray[i] = int.Parse(inputToStr[i].ToString());                // перевожу число в массив цифр
             }
 
-            int[] newDigitsArray = digitsArray.OrderByDescending(i => i).ToArray();  
+            int[] newDigitsArray = new int[digitsArray.Length];
+            Array.Copy(digitsArray, newDigitsArray, digitsArray.Length);
+            
+            for (int i = newDigitsArray.Length - 1; i > 0; i--)
+            {
+                if (newDigitsArray[i] > newDigitsArray[i - 1])
+                {
+                    int temp = newDigitsArray[i];
+                    newDigitsArray[i] = newDigitsArray[i - 1];
+                    newDigitsArray[i - 1] = temp;
+                    break;
+                }
+            }  
 
             if (string.Join("", newDigitsArray) == string.Join("", digitsArray))
                 return -1;
